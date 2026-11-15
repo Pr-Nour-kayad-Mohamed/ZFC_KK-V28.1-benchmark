@@ -1,74 +1,28 @@
-# ZFC_KK V28.1 — Exploratory Image Benchmark
+# ZFC_KK V28.1 Benchmark
 
-Author: Mohamed NOUR KAYAD
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24191865.svg)](https://doi.org/10.5281/zenodo.24191865)
 
-## Overview
+[![GitHub release](https://img.shields.io/github/v/release/Pr-Nour-kayad-Mohamed/ZFC_KK-V28.1-benchmark)](https://github.com/Pr-Nour-kayad-Mohamed/ZFC_KK-V28.1-benchmark/releases)
 
-Exploratory evaluation of the ZFC_KK V28.1 prototype under Termux ARM64.
+## Description
 
-The reported benchmark covers 50 real source images with synthetic noise:
-- 5 random seeds;
-- 4 noise levels;
-- 3 evaluated methods;
-- 3,000 result rows.
+ZFC_KK V28.1 est un cadre de recherche et d’évaluation pour le traitement adaptatif de signaux appliqué aux images. Le dépôt documente une procédure de benchmark structurée, traçable et reproductible, destinée à comparer une approche adaptative à des méthodes de référence dans des conditions contrôlées.
 
-Compared methods:
-- V28.1;
-- Bilateral_approx;
-- NLM_simplified.
+## Contenu
 
-Metrics recorded:
-- PSNR_Y and SSIM_Y;
-- PSNR_RGB and SSIM_RGB;
-- processing time.
+- Script de benchmark sur images réelles
+- Jeu de 50 images publiques et manifeste
+- Archive de données séparée
+- Éléments d’horodatage et de vérification SHA-256
+- Scripts et résultats associés au benchmark V28.1
 
-## Main observations
+## Citation
 
-According to the exported summary:
-- At noise level 0.05, Bilateral_approx has the highest mean PSNR_Y and SSIM_Y.
-- At noise level 0.10, Bilateral_approx has the highest mean PSNR_Y, while V28.1 has the highest mean SSIM_Y.
-- At noise levels 0.15 and 0.25, V28.1 has the highest mean PSNR_Y and SSIM_Y among the three tested implementations.
+Si vous utilisez ce dépôt, veuillez citer la version archivée via son DOI :
 
-These observations apply only to this benchmark configuration.
-They do not establish general superiority over image-denoising methods.
+https://doi.org/10.5281/zenodo.24191865
 
-## Files
+## Auteur
 
-- benchmark_v28_no_opencv.py: benchmark implementation.
-- resultats_no_opencv/: detailed and summary CSV results.
-- horodatage_v28_1.zip: archived benchmark package, including 10 image files.
-- SHA-256 text files: recorded checksums.
-
-## Dataset limitations
-
-The results cover 50 source images, but the archive includes only 10 image files.
-
-Those 10 files were copied from the Pictures directory using filename sorting.
-Their correspondence with benchmark image identifiers has not yet been verified.
-
-The full 50-image dataset and a verified image-ID-to-filename manifest
-are not currently included. Complete reproduction of the reported run
-is therefore not yet established.
-
-## Methodological limitations
-
-The reference methods are local approximate or simplified implementations.
-The metric implementations and preprocessing should be inspected in the code.
-The results concern synthetic noise added to real images, not measurements
-on naturally noisy images or astronomical observations.
-
-## Execution used for the reported run
-
-python -u benchmark_v28_no_opencv.py --images /storage/emulated/0/Pictures --max-images 50 --n-seeds 5
-
-This command uses a device-specific image directory.
-Using a different image collection will not reproduce the same results.
-
-## Zenodo record
-
-https://doi.org/10.5281/zenodo.24238218
-
-## Image rights
-
-Inclusion of an image does not establish ownership or permission for reuse.
-Image provenance and redistribution permissions remain to be documented.
+**Mohamed Nour Kayad**  
+Ministère de l’Éducation nationale et de la Formation professionnelle (MENFOP), République de Djibouti
