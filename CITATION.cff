@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "Please cite this software and consult the associated Zenodo record."
+title: "ZFC_KK V28.1 — Exploratory Image Benchmark"
+type: software
+authors:
+  - family-names: "NOUR KAYAD"
+    given-names: "Mohamed"
+version: "V28.1"
+repository-code: "https://github.com/Pr-Nour-kayad-Mohamed/ZFC_KK-V28.1-benchmark"
+url: "https://doi.org/10.5281/zenodo.24238218"
